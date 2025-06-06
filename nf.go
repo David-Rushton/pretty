@@ -5,8 +5,8 @@ type prettyNFFormat int
 const (
 	DoubleHeightTop    prettyNFFormat = 3
 	DoubleHeightBottom prettyNFFormat = 4
-	DoubleWidth        prettyNFFormat = 5
-	SingleWidth        prettyNFFormat = 6
+	SingleWidth        prettyNFFormat = 5
+	DoubleWidth        prettyNFFormat = 6
 )
 
 func WithDoubleHeightTop() prettyNFFormat {
