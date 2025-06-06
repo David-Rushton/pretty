@@ -36,6 +36,14 @@ func Sprintf(a any, f ...any) string {
 				inBandSignal,
 				ansiEscapeCode,
 				t)
+
+		case prettyNFFormat:
+			inBandSignal = fmt.Sprintf(
+				"%v%v#%v",
+				inBandSignal,
+				ansiEscapeCode,
+				t)
+
 		case Rgb:
 			inBandSignal = fmt.Sprintf(
 				"%v%v[38;2;%v;%v;%vm",
@@ -44,6 +52,7 @@ func Sprintf(a any, f ...any) string {
 				t.Red,
 				t.Green,
 				t.Blue)
+
 		case BackgroundRgb:
 			inBandSignal = fmt.Sprintf(
 				"%v%v[48;2;%v;%v;%vm",
@@ -52,6 +61,7 @@ func Sprintf(a any, f ...any) string {
 				t.Red,
 				t.Green,
 				t.Blue)
+
 		case Link:
 			url = t
 		}
